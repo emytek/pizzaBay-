@@ -28,7 +28,7 @@ const Cart = () => {
       const res = await axios.post("http://localhost:3000/api/orders", data);
       if (res.status === 201) {
         dispatch(reset());
-        router.push(`/orders/${res.data._id}`);
+        router.push(`/orders/${res.data._id}`); //redirect the customer to another page
       }
     } catch (err) {
       console.log(err);
@@ -168,7 +168,7 @@ const Cart = () => {
               <PayPalScriptProvider
                 options={{
                   "client-id":
-                    "AcJ8z_ojaz254f1lrf9GTZO52UySxCOnNON5YjhGZ7CZXZ451kfs29m-6YTDLKvNkeHcAgs8x4oHfAw7",
+                    "AXLtK_mjy-EUQrwLLcq1T6JC_SYbNEnfTbtz5Avr9dI2kknnbqDoa7ji5Rw3rTLthDwFdaRCkG8j42EN",
                   components: "buttons",
                   currency: "USD",
                   "disable-funding": "credit,card,p24",

@@ -83,7 +83,7 @@ const Cart = () => {
                 customer: shipping.name.full_name,
                 address: shipping.address.address_line_1,
                 total: cart.total,
-                method: 1,
+                method: 1,    //the paypal method is 1 while the cash delivery method is 0
               });
             });
           }}
